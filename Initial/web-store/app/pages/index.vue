@@ -22,5 +22,6 @@
   gap: 20px;
   margin-top: 20px;
   background-color: #fff;
+  padding: 20px;
 }
 </style>
