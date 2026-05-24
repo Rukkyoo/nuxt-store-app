@@ -1,3 +1,9 @@
+# Class Activity
+- Remove the button element in `productCard.vue` and use a proper button component to replace it.
+- On click, ensure the user is redirected to the `[id].vue` page and the page should display the product details. Tip: You can wrap the button with <NuxtLink> tag for navigation.
+- Here's the endpoint you're fetching data from [('https://fakestoreapi.com/products/1')].
+- Don't worry too much about styling, functionality is the aim here.
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
