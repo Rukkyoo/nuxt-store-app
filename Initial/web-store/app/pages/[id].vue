@@ -1,3 +1,3 @@
 <template>
-    <h1>Product ID: {{ $route.params.id }}</h1>
+    <h1>This is the product details page</h1>
 </template>
