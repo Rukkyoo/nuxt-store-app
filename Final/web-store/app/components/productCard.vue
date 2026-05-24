@@ -1,21 +1,18 @@
 <script setup lang="ts">
 const { data } = await useFetch("https://fakestoreapi.com/products");
-
-console.log(data);
 </script>
 
 <template>
   <div class="products-container">
     <div v-for="product in data" :key="product.id" class="product-card">
       <img :src="product.image" class="product-image" :alt="product.title" />
-
       <p class="product-title">
         {{ product.title }}
       </p>
-
       <p class="product-price">${{ product.price }}</p>
-
-      <button class="product-button">View Product</button>
+      <NuxtLink :to="`/${product.id}`">
+        <Button />
+      </NuxtLink>
     </div>
   </div>
 </template>
