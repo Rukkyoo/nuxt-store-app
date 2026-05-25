@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const { data } = await useFetch("https://fakestoreapi.com/products");
+
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
+const { data } = await useFetch<Product[]>("https://fakestoreapi.com/products");
 </script>
 
 <template>

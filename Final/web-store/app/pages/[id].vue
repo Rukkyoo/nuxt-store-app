@@ -1,6 +1,14 @@
 <script setup lang="ts">
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+}
+
 const route = useRoute();
-const { data: product } = await useFetch(
+const { data: product } = await useFetch<Product>(
   `https://fakestoreapi.com/products/${route.params.id}`,
 );
 </script>

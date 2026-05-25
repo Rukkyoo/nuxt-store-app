@@ -11,5 +11,6 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  background-color: darksalmon;
 }
 </style>

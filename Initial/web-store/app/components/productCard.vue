@@ -1,21 +1,17 @@
 <script setup lang="ts">
-const { data } = await useFetch("https://fakestoreapi.com/products");
-
-console.log(data);
+import type { Product } from '../../types/product'
+const { data: products } = await useFetch<Product[]>("https://fakestoreapi.com/products");
 </script>
 
 <template>
   <div class="products-container">
-    <div v-for="product in data" :key="product.id" class="product-card">
+    <div v-for="product in products" :key="product.id" class="product-card">
       <img :src="product.image" class="product-image" :alt="product.title" />
-
       <p class="product-title">
         {{ product.title }}
       </p>
-
       <p class="product-price">${{ product.price }}</p>
-
-      <button class="product-button">View Product</button>
+        <button>View Product</button>
     </div>
   </div>
 </template>
@@ -66,6 +62,7 @@ console.log(data);
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  background-color: darksalmon;
 }
 
 /* Tablet */
