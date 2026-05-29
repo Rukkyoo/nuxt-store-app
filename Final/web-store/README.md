@@ -30,7 +30,7 @@ A beautiful, type‑safe Nuxt 3 storefront that fetches products from the publi
 ## Getting Started
 ```bash
 # Clone the repo (if you haven't already)
-git clone https://github.com/your‑username/nuxt-store-app.git
+git clone https://github.com/rukkyoo/nuxt-store-app.git
 cd nuxt-store-app/Final/web-store
 
 # Install dependencies
