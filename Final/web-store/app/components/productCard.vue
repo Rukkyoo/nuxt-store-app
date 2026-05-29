@@ -1,17 +1,23 @@
 <script setup lang="ts">
-
 interface Product {
   id: number;
   title: string;
   price: number;
   image: string;
 }
-const { data } = await useFetch<Product[]>("https://fakestoreapi.com/products");
+
+const props = defineProps<{
+  products: Product[];
+}>();
 </script>
 
 <template>
   <div class="products-container">
-    <div v-for="product in data" :key="product.id" class="product-card">
+    <div
+      v-for="product in props.products"
+      :key="product.id"
+      class="product-card"
+    >
       <img :src="product.image" class="product-image" :alt="product.title" />
       <p class="product-title">
         {{ product.title }}
